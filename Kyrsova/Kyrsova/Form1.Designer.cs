@@ -48,6 +48,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplier_company_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.director_full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delivery_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargo_weight_kg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,11 +64,6 @@
             this.NunberOld = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplier_company_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.director_full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.delivery_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargo_weight_kg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -85,6 +85,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button6);
@@ -103,17 +104,18 @@
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1121, 570);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Головна";
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
             this.textBox3.Location = new System.Drawing.Point(83, 171);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(206, 20);
@@ -122,61 +124,68 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button7.Location = new System.Drawing.Point(46, 427);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(296, 23);
             this.button7.TabIndex = 30;
             this.button7.Text = "Видалити все";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button6.Location = new System.Drawing.Point(46, 398);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(296, 23);
             this.button6.TabIndex = 29;
             this.button6.Text = "Зберегти данні у XML-файл";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button5.Location = new System.Drawing.Point(45, 369);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(296, 23);
             this.button5.TabIndex = 28;
             this.button5.Text = "Завантажити данні з XML-файлу";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button4.Location = new System.Drawing.Point(46, 340);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(296, 23);
             this.button4.TabIndex = 27;
             this.button4.Text = "Видалити запис";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.Location = new System.Drawing.Point(46, 311);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(296, 23);
             this.button3.TabIndex = 26;
             this.button3.Text = "Редагувати запис";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button2.Location = new System.Drawing.Point(46, 282);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(296, 23);
             this.button2.TabIndex = 25;
             this.button2.Text = "Додати запис";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label11
@@ -287,8 +296,34 @@
             this.dataGridView2.Size = new System.Drawing.Size(545, 463);
             this.dataGridView2.TabIndex = 10;
             // 
+            // date
+            // 
+            this.date.HeaderText = "date";
+            this.date.Name = "date";
+            // 
+            // supplier_company_name
+            // 
+            this.supplier_company_name.HeaderText = "supplier_company_name";
+            this.supplier_company_name.Name = "supplier_company_name";
+            // 
+            // director_full_name
+            // 
+            this.director_full_name.HeaderText = "director_full_name";
+            this.director_full_name.Name = "director_full_name";
+            // 
+            // delivery_time
+            // 
+            this.delivery_time.HeaderText = "delivery_time";
+            this.delivery_time.Name = "delivery_time";
+            // 
+            // cargo_weight_kg
+            // 
+            this.cargo_weight_kg.HeaderText = "cargo_weight_kg";
+            this.cargo_weight_kg.Name = "cargo_weight_kg";
+            // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.numericUpDown1);
@@ -305,7 +340,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1121, 570);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Пошук";
-            this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // dataGridView1
@@ -318,12 +352,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1.Location = new System.Drawing.Point(125, 365);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 34);
             this.button1.TabIndex = 8;
             this.button1.Text = "Оновити пошук";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // numericUpDown1
             // 
@@ -420,31 +455,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Розрахувати час розвантаження";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // date
-            // 
-            this.date.HeaderText = "date";
-            this.date.Name = "date";
-            // 
-            // supplier_company_name
-            // 
-            this.supplier_company_name.HeaderText = "supplier_company_name";
-            this.supplier_company_name.Name = "supplier_company_name";
-            // 
-            // director_full_name
-            // 
-            this.director_full_name.HeaderText = "director_full_name";
-            this.director_full_name.Name = "director_full_name";
-            // 
-            // delivery_time
-            // 
-            this.delivery_time.HeaderText = "delivery_time";
-            this.delivery_time.Name = "delivery_time";
-            // 
-            // cargo_weight_kg
-            // 
-            this.cargo_weight_kg.HeaderText = "cargo_weight_kg";
-            this.cargo_weight_kg.Name = "cargo_weight_kg";
             // 
             // Form1
             // 

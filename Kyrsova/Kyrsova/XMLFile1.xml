@@ -1,25 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-
-<delivery_schedule>
-  <delivery>
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Sigma>
     <date>15.05.2024</date>
     <supplier_company_name>ABC Logistics</supplier_company_name>
     <director_full_name>John Smith</director_full_name>
     <delivery_time>10:00</delivery_time>
     <cargo_weight_kg>500</cargo_weight_kg>
-  </delivery>
-  <delivery>
+  </Sigma>
+  <Sigma>
     <date>17.05.2024</date>
     <supplier_company_name>XYZ Imports</supplier_company_name>
     <director_full_name>Sarah Johnson</director_full_name>
     <delivery_time>14:30</delivery_time>
     <cargo_weight_kg>800</cargo_weight_kg>
-  </delivery>
-  <delivery>
+  </Sigma>
+  <Sigma>
     <date>20.05.2024</date>
     <supplier_company_name>ABC Logistics</supplier_company_name>
     <director_full_name>John Smith</director_full_name>
     <delivery_time>12:00</delivery_time>
     <cargo_weight_kg>650</cargo_weight_kg>
-  </delivery>
-</delivery_schedule>
+  </Sigma>
+  <Sigma />
+  <Sigma />
+</NewDataSet>

@@ -173,7 +173,52 @@ namespace Kyrsova
 
         private void button6_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DataSet dataSet = new DataSet();
+                DataTable dataTable = new DataTable();
+                dataTable.TableName = "Sigma";
+                dataTable.Columns.Add("date");
+                dataTable.Columns.Add("supplier_company_name");
+                dataTable.Columns.Add("director_full_name");
+                dataTable.Columns.Add("delivery_time");
+                dataTable.Columns.Add("cargo_weight_kg");
+               
 
+                dataSet.Tables.Add(dataTable);
+
+                foreach (DataGridViewRow r in dataGridView2.Rows)
+                {
+                    DataRow row = dataSet.Tables["Sigma"].NewRow();
+                    row["date"] = r.Cells[0].Value;
+                    row["supplier_company_name"] = r.Cells[1].Value;
+                    row["director_full_name"] = r.Cells[2].Value;
+                    row["delivery_time"] = r.Cells[3].Value;
+                    row["cargo_weight_kg"] = r.Cells[4].Value;
+                   
+
+                    dataSet.Tables["Sigma"].Rows.Add(row);
+                }
+                dataSet.WriteXml("C:\\Users\\ZXC\\source\\repos\\NewRepo\\Kyrsova\\Kyrsova\\XMLFile1.xml");
+
+                MessageBox.Show("XML-file is saved!", "Done!");
+            }
+            catch
+            {
+                MessageBox.Show("Could not save XML-file", "Error!");
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.SelectedRows.Count > 0)
+            {
+                dataGridView2.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Table is empty!", "Error!");
+            }
         }
     }
 }
