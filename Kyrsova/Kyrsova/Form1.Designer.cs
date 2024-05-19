@@ -54,16 +54,23 @@
             this.delivery_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cargo_weight_kg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Дата = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplier_company_name_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.director_full_name_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delivery_time_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargo_weight_kg_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.NunberOld = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -324,6 +331,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.button9);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.button8);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.numericUpDown1);
@@ -331,9 +342,7 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.radioButton5);
             this.tabPage1.Controls.Add(this.radioButton4);
-            this.tabPage1.Controls.Add(this.NunberOld);
             this.tabPage1.Controls.Add(this.radioButton2);
-            this.tabPage1.Controls.Add(this.radioButton1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -342,13 +351,82 @@
             this.tabPage1.Text = "Пошук";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(240, 233);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.TabIndex = 13;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button9.Location = new System.Drawing.Point(95, 177);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(279, 23);
+            this.button9.TabIndex = 12;
+            this.button9.Text = "Підрахувати кількість поставок и загальну вагу ";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(283, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 23);
+            this.label7.TabIndex = 11;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button8.Location = new System.Drawing.Point(95, 79);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(187, 23);
+            this.button8.TabIndex = 10;
+            this.button8.Text = "Розрахувати час розвантаження";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Дата,
+            this.supplier_company_name_,
+            this.director_full_name_,
+            this.delivery_time_,
+            this.cargo_weight_kg_});
             this.dataGridView1.Location = new System.Drawing.Point(420, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(421, 458);
+            this.dataGridView1.Size = new System.Drawing.Size(547, 458);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // Дата
+            // 
+            this.Дата.HeaderText = "date";
+            this.Дата.Name = "Дата";
+            // 
+            // supplier_company_name_
+            // 
+            this.supplier_company_name_.HeaderText = "supplier_company_name";
+            this.supplier_company_name_.Name = "supplier_company_name_";
+            // 
+            // director_full_name_
+            // 
+            this.director_full_name_.HeaderText = "director_full_name";
+            this.director_full_name_.Name = "director_full_name_";
+            // 
+            // delivery_time_
+            // 
+            this.delivery_time_.HeaderText = "delivery_time";
+            this.delivery_time_.Name = "delivery_time_";
+            // 
+            // cargo_weight_kg_
+            // 
+            this.cargo_weight_kg_.HeaderText = "cargo_weight_kg";
+            this.cargo_weight_kg_.Name = "cargo_weight_kg_";
             // 
             // button1
             // 
@@ -357,8 +435,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 34);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Оновити пошук";
+            this.button1.Text = "Оновити таблицю";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // numericUpDown1
             // 
@@ -423,17 +502,6 @@
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // NunberOld
-            // 
-            this.NunberOld.AutoSize = true;
-            this.NunberOld.Location = new System.Drawing.Point(95, 170);
-            this.NunberOld.Name = "NunberOld";
-            this.NunberOld.Size = new System.Drawing.Size(270, 30);
-            this.NunberOld.TabIndex = 2;
-            this.NunberOld.Text = "Підрахувати кількість поставок и загальну вагу \r\nдо зазначеного року\r\n";
-            this.NunberOld.UseVisualStyleBackColor = true;
-            this.NunberOld.CheckedChanged += new System.EventHandler(this.NunberOld_CheckedChanged);
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -443,18 +511,6 @@
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "Постачальники з поставками до 12:00 завтра";
             this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(95, 80);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(191, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Розрахувати час розвантаження";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -482,12 +538,10 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton NunberOld;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -516,6 +570,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn director_full_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn delivery_time;
         private System.Windows.Forms.DataGridViewTextBoxColumn cargo_weight_kg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Дата;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplier_company_name_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn director_full_name_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn delivery_time_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargo_weight_kg_;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label9;
     }
 }
 
