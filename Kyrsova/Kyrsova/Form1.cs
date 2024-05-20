@@ -24,9 +24,13 @@ namespace Kyrsova
             return XDocument.Load(filePath);
         }
         // Очистка DataGridView
-        private void ClearDataGridView()
+        private void ClearDataGridView1()
         {
             dataGridView1.Rows.Clear();
+        }
+        private void ClearDataGridView2()
+        {
+            dataGridView2.Rows.Clear();
         }
         // Метод для расчета времени разгрузки
         private TimeSpan CalculateUnloadingTime(double weight)
@@ -79,7 +83,7 @@ namespace Kyrsova
             if (!(sender as RadioButton).Checked)
                 return;
 
-            ClearDataGridView();
+            ClearDataGridView1();
 
             var doc = LoadXml();
             var today = DateTime.Today;
@@ -237,6 +241,7 @@ namespace Kyrsova
 
         private void button5_Click(object sender, EventArgs e)
         {
+            ClearDataGridView2();
             loadTable(dataGridView2);
         }
 
@@ -371,7 +376,7 @@ namespace Kyrsova
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ClearDataGridView();
+            ClearDataGridView1();
             loadTable(dataGridView1);
             
 
