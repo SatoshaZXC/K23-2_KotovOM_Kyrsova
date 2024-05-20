@@ -17,6 +17,17 @@ namespace Kyrsova
 {
     public partial class Form1 : Form
     {
+        // Метод загрузки данных из XML файла
+        private XDocument LoadXml()
+        {
+            string filePath = @"C:\Users\ZXC\source\repos\NewRepo\Kyrsova\Kyrsova\XMLFile1.xml";
+            return XDocument.Load(filePath);
+        }
+        // Очистка DataGridView
+        private void ClearDataGridView()
+        {
+            dataGridView1.Rows.Clear();
+        }
         // Метод для расчета времени разгрузки
         private TimeSpan CalculateUnloadingTime(double weight)
         {
@@ -25,7 +36,7 @@ namespace Kyrsova
             double totalMinutes = (weight / 100) * minutesPer100Kg;
             return TimeSpan.FromMinutes(totalMinutes);
         }
-        private void loadTable(DataGridView zxc)
+        private void loadTable(DataGridView dataGridView1)
         {
             if (dataGridView2.SelectedRows.Count > 0)
             {
@@ -40,12 +51,12 @@ namespace Kyrsova
 
                     foreach (DataRow item in dataSet.Tables[0].Rows)
                     {
-                        int n = zxc.Rows.Add();
-                        zxc.Rows[n].Cells[0].Value = item["date"];
-                        zxc.Rows[n].Cells[1].Value = item["supplier_company_name"];
-                        zxc.Rows[n].Cells[2].Value = item["director_full_name"];
-                        zxc.Rows[n].Cells[3].Value = item["delivery_time"];
-                        zxc.Rows[n].Cells[4].Value = item["cargo_weight_kg"];
+                        int n = dataGridView1.Rows.Add();
+                        dataGridView1.Rows[n].Cells[0].Value = item["date"];
+                        dataGridView1.Rows[n].Cells[1].Value = item["supplier_company_name"];
+                        dataGridView1.Rows[n].Cells[2].Value = item["director_full_name"];
+                        dataGridView1.Rows[n].Cells[3].Value = item["delivery_time"];
+                        dataGridView1.Rows[n].Cells[4].Value = item["cargo_weight_kg"];
                     }
                 }
                 else
@@ -54,11 +65,134 @@ namespace Kyrsova
                 }
             }
         }
+
         public Form1()
         {
             InitializeComponent();
+            radioButton3.CheckedChanged += new EventHandler(RadioButton_CheckedChanged);
+            radioButton4.CheckedChanged += new EventHandler(RadioButton_CheckedChanged);
+            radioButton5.CheckedChanged += new EventHandler(RadioButton_CheckedChanged);
         }
+        // Обработчик события изменения состояния RadioButton
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!(sender as RadioButton).Checked)
+                return;
 
+            ClearDataGridView();
+
+            var doc = LoadXml();
+            var today = DateTime.Today;
+
+            if (sender == radioButton3)
+            {
+                // Поставки на завтра в первой половине дня (до 12:00)
+                var tomorrow = today.AddDays(1);
+                var supplies = doc.Descendants("Sigma")
+                    .Where(s =>
+                    {
+                        var dateElement = s.Element("date");
+                        var timeElement = s.Element("delivery_time");
+                        return dateElement != null && timeElement != null &&
+                               DateTime.Parse(dateElement.Value) == tomorrow &&
+                               TimeSpan.Parse(timeElement.Value) < new TimeSpan(12, 0, 0);
+                    })
+                    .Select(s => new
+                    {
+                        Date = DateTime.Parse(s.Element("date").Value),
+                        Supplier = s.Element("supplier_company_name")?.Value,
+                        Director = s.Element("director_full_name")?.Value,
+                        Time = s.Element("delivery_time")?.Value,
+                        Weight = double.Parse(s.Element("cargo_weight_kg")?.Value ?? "0")
+                    }).ToList();
+
+                foreach (var supply in supplies)
+                {
+                    int rowIndex = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[rowIndex].Cells[0].Value = supply.Date;
+                    dataGridView1.Rows[rowIndex].Cells[1].Value = supply.Supplier;
+                    dataGridView1.Rows[rowIndex].Cells[2].Value = supply.Director;
+                    dataGridView1.Rows[rowIndex].Cells[3].Value = supply.Time;
+                    dataGridView1.Rows[rowIndex].Cells[4].Value = supply.Weight;
+                }
+            }
+            else if (sender == radioButton4)
+            {
+                // Последняя поставка текущего дня
+                var supplies = doc.Descendants("Sigma")
+                    .Where(s =>
+                    {
+                        var dateElement = s.Element("date");
+                        return dateElement != null && DateTime.Parse(dateElement.Value) == today;
+                    })
+                    .Select(s => new
+                    {
+                        Date = DateTime.Parse(s.Element("date").Value),
+                        Supplier = s.Element("supplier_company_name")?.Value,
+                        Director = s.Element("director_full_name")?.Value,
+                        Time = TimeSpan.Parse(s.Element("delivery_time")?.Value ?? "00:00"),
+                        Weight = double.Parse(s.Element("cargo_weight_kg")?.Value ?? "0")
+                    })
+                    .OrderByDescending(s => s.Time)
+                    .FirstOrDefault();
+
+                if (supplies != null)
+                {
+                    int rowIndex = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[rowIndex].Cells[0].Value = supplies.Date;
+                    dataGridView1.Rows[rowIndex].Cells[1].Value = supplies.Supplier;
+                    dataGridView1.Rows[rowIndex].Cells[2].Value = supplies.Director;
+                    dataGridView1.Rows[rowIndex].Cells[3].Value = supplies.Time;
+                    dataGridView1.Rows[rowIndex].Cells[4].Value = supplies.Weight;
+                }
+            }
+            else if (sender == radioButton5)
+            {
+                // Сортировка и создание файлов по дате поставки
+                var supplies = doc.Descendants("Sigma")
+                    .Where(s => s.Element("date") != null && s.Element("supplier_company_name") != null &&
+                                s.Element("director_full_name") != null && s.Element("delivery_time") != null &&
+                                s.Element("cargo_weight_kg") != null)
+                    .Select(s => new
+                    {
+                        Date = DateTime.Parse(s.Element("date").Value),
+                        Supplier = s.Element("supplier_company_name").Value,
+                        Director = s.Element("director_full_name").Value,
+                        Time = s.Element("delivery_time").Value,
+                        Weight = double.Parse(s.Element("cargo_weight_kg").Value)
+                    })
+                    .OrderBy(s => s.Date) // Сортировка по дате
+                    .ToList();
+
+                var groupedSupplies = supplies.GroupBy(s => s.Date).OrderBy(g => g.Key);
+
+                // Добавление отсортированных данных в DataGridView
+                foreach (var supply in supplies)
+                {
+                    int rowIndex = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[rowIndex].Cells[0].Value = supply.Date;
+                    dataGridView1.Rows[rowIndex].Cells[1].Value = supply.Supplier;
+                    dataGridView1.Rows[rowIndex].Cells[2].Value = supply.Director;
+                    dataGridView1.Rows[rowIndex].Cells[3].Value = supply.Time;
+                    dataGridView1.Rows[rowIndex].Cells[4].Value = supply.Weight;
+                }
+
+                // Создание файлов
+                foreach (var group in groupedSupplies)
+                {
+                    string fileName = $@"C:\Users\ZXC\source\repos\NewRepo\Kyrsova\Kyrsova\{group.Key:yyyyMMdd}.txt";
+                    using (StreamWriter writer = new StreamWriter(fileName))
+                    {
+                        foreach (var supply in group)
+                        {
+                            writer.WriteLine($"Date: {supply.Date}, Supplier: {supply.Supplier}, Director: {supply.Director}, Time: {supply.Time}, Weight: {supply.Weight} kg");
+                        }
+                    }
+                }
+
+                MessageBox.Show("Файлы созданы и упорядочены по дате поставки.");
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -237,7 +371,10 @@ namespace Kyrsova
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ClearDataGridView();
             loadTable(dataGridView1);
+            
+
         }
 
         private void button8_Click(object sender, EventArgs e)

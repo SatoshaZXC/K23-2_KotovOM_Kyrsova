@@ -70,7 +70,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -342,7 +342,7 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.radioButton5);
             this.tabPage1.Controls.Add(this.radioButton4);
-            this.tabPage1.Controls.Add(this.radioButton2);
+            this.tabPage1.Controls.Add(this.radioButton3);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -354,7 +354,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(240, 233);
+            this.label9.Location = new System.Drawing.Point(234, 179);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 13;
@@ -362,7 +362,7 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button9.Location = new System.Drawing.Point(95, 177);
+            this.button9.Location = new System.Drawing.Point(95, 125);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(279, 23);
             this.button9.TabIndex = 12;
@@ -441,7 +441,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(114, 231);
+            this.numericUpDown1.Location = new System.Drawing.Point(95, 179);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -465,7 +465,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(122, 215);
+            this.label2.Location = new System.Drawing.Point(113, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 6;
@@ -494,7 +494,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(95, 281);
+            this.radioButton4.Location = new System.Drawing.Point(95, 297);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(319, 17);
             this.radioButton4.TabIndex = 3;
@@ -502,15 +502,15 @@
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // radioButton2
+            // radioButton3
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(95, 132);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(259, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "Постачальники з поставками до 12:00 завтра";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(95, 261);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(259, 17);
+            this.radioButton3.TabIndex = 1;
+            this.radioButton3.Text = "Постачальники з поставками до 12:00 завтра";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -542,7 +542,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;

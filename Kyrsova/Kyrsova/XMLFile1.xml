@@ -21,6 +21,26 @@
     <delivery_time>12:00</delivery_time>
     <cargo_weight_kg>650</cargo_weight_kg>
   </Sigma>
-  <Sigma />
+  <Sigma>
+    <date>21.05.2024</date>
+    <supplier_company_name>zxc</supplier_company_name>
+    <director_full_name>zxc Ghul may</director_full_name>
+    <delivery_time>11:00</delivery_time>
+    <cargo_weight_kg>500</cargo_weight_kg>
+  </Sigma>
+  <Sigma>
+    <date>07.05.2024</date>
+    <supplier_company_name>zxc</supplier_company_name>
+    <director_full_name>zxc Ghul may</director_full_name>
+    <delivery_time>11:00</delivery_time>
+    <cargo_weight_kg>500</cargo_weight_kg>
+  </Sigma>
+  <Sigma>
+    <date>20.05.2024</date>
+    <supplier_company_name>zxc</supplier_company_name>
+    <director_full_name>zxc qasdasd</director_full_name>
+    <delivery_time>11:00</delivery_time>
+    <cargo_weight_kg>10000</cargo_weight_kg>
+  </Sigma>
   <Sigma />
 </NewDataSet>
