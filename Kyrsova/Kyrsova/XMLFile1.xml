@@ -2,13 +2,6 @@
 <NewDataSet>
   <Sigma>
     <date>19.05.2024</date>
-    <supplier_company_name>ABC Logistics</supplier_company_name>
-    <director_full_name>John Smith</director_full_name>
-    <delivery_time>10:00</delivery_time>
-    <cargo_weight_kg>500</cargo_weight_kg>
-  </Sigma>
-  <Sigma>
-    <date>19.05.2024</date>
     <supplier_company_name>XYZ Imports</supplier_company_name>
     <director_full_name>Sarah Johnson</director_full_name>
     <delivery_time>14:00</delivery_time>
@@ -188,6 +181,7 @@
     <director_full_name>Olivia Davis</director_full_name>
     <delivery_time>08:45</delivery_time>
     <cargo_weight_kg>350</cargo_weight_kg>
-    </Sigma>
-  </NewDataSet>
-
+  </Sigma>
+  <Sigma />
+  <Sigma />
+</NewDataSet>

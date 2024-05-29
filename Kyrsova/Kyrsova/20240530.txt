@@ -1,1 +1,2 @@
-Date: 30.05.2024 00:00:00, Supplier: Efficient Transport, Director: Mia Clark, Time: 14:00, Weight: 700 kg
+Date: 30.05.2024 00:00:00, Supplier: Trusty Shipping, Director: Alexander Baker, Time: 10:45, Weight: 600 kg
+Date: 30.05.2024 00:00:00, Supplier: Global Shipments, Director: John Doe, Time: 14:30, Weight: 700 kg

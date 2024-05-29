@@ -1,1 +1,2 @@
-Date: 22.05.2024 00:00:00, Supplier: Quick Deliveries, Director: Emily Davis, Time: 11:00, Weight: 450 kg
+Date: 22.05.2024 00:00:00, Supplier: Reliable Logistics, Director: James Taylor, Time: 10:30, Weight: 750 kg
+Date: 22.05.2024 00:00:00, Supplier: Fast Track Shipping, Director: Isabella Anderson, Time: 14:30, Weight: 500 kg

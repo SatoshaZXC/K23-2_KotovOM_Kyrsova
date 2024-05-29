@@ -1,1 +1,2 @@
-Date: 27.05.2024 00:00:00, Supplier: Blue Sky Transport, Director: Daniel Thomas, Time: 09:45, Weight: 500 kg
+Date: 27.05.2024 00:00:00, Supplier: Fast Lane Shipping, Director: David Green, Time: 09:30, Weight: 650 kg
+Date: 27.05.2024 00:00:00, Supplier: On Time Transport, Director: Olivia Hall, Time: 13:00, Weight: 750 kg

@@ -1,1 +1,1 @@
-Date: 19.05.2024 00:00:00, Supplier: ABC Logistics, Director: John Smith, Time: 10:00, Weight: 500 kg
+Date: 19.05.2024 00:00:00, Supplier: XYZ Imports, Director: Sarah Johnson, Time: 14:00, Weight: 550 kg

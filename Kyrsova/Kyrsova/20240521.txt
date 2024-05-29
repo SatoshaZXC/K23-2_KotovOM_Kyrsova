@@ -1,1 +1,2 @@
-Date: 21.05.2024 00:00:00, Supplier: Global Shipping, Director: Michael Brown, Time: 09:00, Weight: 600 kg
+Date: 21.05.2024 00:00:00, Supplier: Speedy Transports, Director: David Wilson, Time: 11:00, Weight: 700 kg
+Date: 21.05.2024 00:00:00, Supplier: Express Freight, Director: Olivia Martinez, Time: 15:00, Weight: 600 kg

@@ -58,7 +58,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.Дата = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplier_company_name_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.director_full_name_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -377,7 +377,7 @@
             this.tabPage1.Controls.Add(this.button9);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.button8);
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.dataGridView);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.numericUpDown1);
             this.tabPage1.Controls.Add(this.label2);
@@ -431,19 +431,19 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Дата,
             this.supplier_company_name_,
             this.director_full_name_,
             this.delivery_time_,
             this.cargo_weight_kg_});
-            this.dataGridView1.Location = new System.Drawing.Point(420, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(547, 458);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridView.Location = new System.Drawing.Point(420, 19);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(547, 458);
+            this.dataGridView.TabIndex = 9;
             // 
             // Дата
             // 
@@ -562,7 +562,7 @@
             this.ClientSize = new System.Drawing.Size(1129, 603);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sigma abc";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -571,7 +571,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
@@ -587,7 +587,7 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.NumericUpDown numericUpDown2;

@@ -1,1 +1,2 @@
-Date: 29.05.2024 00:00:00, Supplier: Next Day Shipping, Director: Lucas Harris, Time: 08:00, Weight: 550 kg
+Date: 29.05.2024 00:00:00, Supplier: Speedy Shipping, Director: Lucas Adams, Time: 08:00, Weight: 700 kg
+Date: 29.05.2024 00:00:00, Supplier: Efficient Forwarding, Director: Mia Nelson, Time: 13:15, Weight: 550 kg

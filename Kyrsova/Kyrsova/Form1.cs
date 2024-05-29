@@ -26,7 +26,7 @@ namespace Kyrsova
         // Очистка DataGridView
         private void ClearDataGridView1()
         {
-            dataGridView1.Rows.Clear();
+            dataGridView.Rows.Clear();
         }
         private void ClearDataGridView2()
         {
@@ -112,12 +112,12 @@ namespace Kyrsova
 
                 foreach (var supply in supplies)
                 {
-                    int rowIndex = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[rowIndex].Cells[0].Value = supply.Date;
-                    dataGridView1.Rows[rowIndex].Cells[1].Value = supply.Supplier;
-                    dataGridView1.Rows[rowIndex].Cells[2].Value = supply.Director;
-                    dataGridView1.Rows[rowIndex].Cells[3].Value = supply.Time;
-                    dataGridView1.Rows[rowIndex].Cells[4].Value = supply.Weight;
+                    int rowIndex = dataGridView.Rows.Add();
+                    dataGridView.Rows[rowIndex].Cells[0].Value = supply.Date;
+                    dataGridView.Rows[rowIndex].Cells[1].Value = supply.Supplier;
+                    dataGridView.Rows[rowIndex].Cells[2].Value = supply.Director;
+                    dataGridView.Rows[rowIndex].Cells[3].Value = supply.Time;
+                    dataGridView.Rows[rowIndex].Cells[4].Value = supply.Weight;
                 }
             }
             else if (sender == radioButton4)
@@ -142,12 +142,12 @@ namespace Kyrsova
 
                 if (supplies != null)
                 {
-                    int rowIndex = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[rowIndex].Cells[0].Value = supplies.Date;
-                    dataGridView1.Rows[rowIndex].Cells[1].Value = supplies.Supplier;
-                    dataGridView1.Rows[rowIndex].Cells[2].Value = supplies.Director;
-                    dataGridView1.Rows[rowIndex].Cells[3].Value = supplies.Time;
-                    dataGridView1.Rows[rowIndex].Cells[4].Value = supplies.Weight;
+                    int rowIndex = dataGridView.Rows.Add();
+                    dataGridView.Rows[rowIndex].Cells[0].Value = supplies.Date;
+                    dataGridView.Rows[rowIndex].Cells[1].Value = supplies.Supplier;
+                    dataGridView.Rows[rowIndex].Cells[2].Value = supplies.Director;
+                    dataGridView.Rows[rowIndex].Cells[3].Value = supplies.Time;
+                    dataGridView.Rows[rowIndex].Cells[4].Value = supplies.Weight;
                 }
             }
             else if (sender == radioButton5)
@@ -173,12 +173,13 @@ namespace Kyrsova
                 // Добавление отсортированных данных в DataGridView
                 foreach (var supply in supplies)
                 {
-                    int rowIndex = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[rowIndex].Cells[0].Value = supply.Date;
-                    dataGridView1.Rows[rowIndex].Cells[1].Value = supply.Supplier;
-                    dataGridView1.Rows[rowIndex].Cells[2].Value = supply.Director;
-                    dataGridView1.Rows[rowIndex].Cells[3].Value = supply.Time;
-                    dataGridView1.Rows[rowIndex].Cells[4].Value = supply.Weight;
+                    int rowIndex = dataGridView.Rows.Add();
+                    dataGridView.Rows[rowIndex].Cells[0].Value = supply.Date.ToString("dd.MM.yyyy");
+                    //dataGridView.Rows[rowIndex].Cells[0].Value = supply.Date;
+                    dataGridView.Rows[rowIndex].Cells[1].Value = supply.Supplier;
+                    dataGridView.Rows[rowIndex].Cells[2].Value = supply.Director;
+                    dataGridView.Rows[rowIndex].Cells[3].Value = supply.Time;
+                    dataGridView.Rows[rowIndex].Cells[4].Value = supply.Weight;
                 }
 
                 // Создание файлов
@@ -379,7 +380,7 @@ namespace Kyrsova
         private void button1_Click(object sender, EventArgs e)
         {
             ClearDataGridView1();
-            loadTable(dataGridView1);
+            loadTable(dataGridView);
             
 
         }
@@ -387,10 +388,10 @@ namespace Kyrsova
         private void button8_Click(object sender, EventArgs e)
         {
 
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView.SelectedRows.Count > 0)
             {
                 // Получаем выбранную строку
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
 
                 // Получаем вес из ячейки 4
                 double weight = Convert.ToDouble(selectedRow.Cells[4].Value);

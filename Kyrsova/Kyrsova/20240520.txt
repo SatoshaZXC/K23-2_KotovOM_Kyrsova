@@ -1,1 +1,2 @@
-Date: 20.05.2024 00:00:00, Supplier: XYZ Imports, Director: Sarah Johnson, Time: 14:30, Weight: 800 kg
+Date: 20.05.2024 00:00:00, Supplier: Global Shipping, Director: Michael Brown, Time: 09:00, Weight: 600 kg
+Date: 20.05.2024 00:00:00, Supplier: Quick Deliveries, Director: Emily Davis, Time: 13:00, Weight: 650 kg
