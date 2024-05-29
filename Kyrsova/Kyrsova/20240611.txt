@@ -1,0 +1,1 @@
+Date: 11.06.2024 00:00:00, Supplier: Global Shipments, Director: John Doe, Time: 09:00, Weight: 650 kg

@@ -234,6 +234,47 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ABC Logistics",
+            "XYZ Imports",
+            "Global Shipping",
+            "Quick Deliveries",
+            "Speedy Transports",
+            "Express Freight",
+            "Reliable Logistics",
+            "Fast Track Shipping",
+            "Blue Sky Transport",
+            "Prime Deliveries",
+            "Next Day Shipping",
+            "Efficient Transport",
+            "Trusty Freight",
+            "Global Forwarding",
+            "Speed Logistics",
+            "Quick Freight",
+            "Fast Lane Shipping",
+            "On Time Transport",
+            "Reliable Forwarding",
+            "Prime Transports",
+            "Speedy Shipping",
+            "Efficient Forwarding",
+            "Trusty Shipping",
+            "Global Shipments",
+            "Express Logistics",
+            "Quick Logistics",
+            "Reliable Shipping",
+            "Fast Delivery",
+            "Trusty Logistics",
+            "Blue Sky Shipping",
+            "Express Transports",
+            "Global Deliveries",
+            "Reliable Transport",
+            "Quick Shipping",
+            "Speed Logistics",
+            "Fast Forwarding",
+            "Prime Freight",
+            "Efficient Logistics",
+            "Quick Logistics",
+            "Reliable Transports"});
             this.comboBox1.Location = new System.Drawing.Point(198, 40);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -291,6 +332,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AccessibleName = "";
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.date,
@@ -490,6 +532,7 @@
             this.radioButton5.TabIndex = 4;
             this.radioButton5.Text = "Упорядкувати за датою";
             this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton4
             // 

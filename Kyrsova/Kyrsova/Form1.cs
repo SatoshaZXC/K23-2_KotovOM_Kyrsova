@@ -252,7 +252,9 @@ namespace Kyrsova
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+         
 
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -448,6 +450,11 @@ namespace Kyrsova
                 // Выводим сообщение об ошибке в случае возникновения исключения
                 MessageBox.Show("Виникла помилка при обробці файлу: " + ex.Message);
             }
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
