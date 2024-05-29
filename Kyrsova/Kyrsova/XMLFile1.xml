@@ -187,4 +187,7 @@
     <supplier_company_name>Next Day Shipping</supplier_company_name>
     <director_full_name>Olivia Davis</director_full_name>
     <delivery_time>08:45</delivery_time>
-    <cargo_weight_kg
+    <cargo_weight_kg>350</cargo_weight_kg>
+    </Sigma>
+  </NewDataSet>
+
